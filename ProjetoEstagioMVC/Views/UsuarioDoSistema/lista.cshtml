@@ -1,0 +1,27 @@
+﻿
+@model  List<UsuarioModel>
+
+@if (Model != null && Model.Any())
+			{
+				foreach (UsuarioModel usuario in Model)
+				{
+					<Grid class='GridArry'>
+						<div class='GridTable'>
+							<div class='GridBtnEdit'>
+								<button class='BtnGridEdit' data-bs-toggle="modal" data-bs-target="#modaleditar"> Editar </button>
+
+								<button class='BtnGridEditExcluir' data-bs-toggle="modal" data-bs-target="#modalexclusao">Excluir</button>
+							</div>
+
+							<div class="container-grid-mail-centro-nome"><span class='NomeSpan'>Nome:</span><span>@usuario.Nome</span></div>
+							<div class="container-grid-mail-centro"><span class='NomeSpan'>Email:</span><span>@usuario.Email</span></div>
+							<div class="Btn-grid-centro">
+								<button class="btn-green" asp-route-id="@usuario.IdUsuario" data-bs-toggle="modal" data-bs-target="#modaleditar">Editar</button>
+								<button class="btn-red" asp-route-id="@usuario.IdUsuario" data-bs-toggle="modal" data-bs-target="#modalexclusao">Excluir</button>
+							</div>
+						</div>
+
+					</Grid>
+				}
+
+			}

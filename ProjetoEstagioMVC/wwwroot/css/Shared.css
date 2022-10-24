@@ -1,0 +1,61 @@
+﻿.BackNav {
+    background-color: #2B6777;
+    
+}
+.ColorNavLink {
+    color: white !important;
+    text-align: center;
+   
+}
+.ColorNavLinkEnd {
+    color: white !important;
+    display:flex;
+    justify-content:flex-end;
+}
+.ColorNavLinkStart {
+    color: white !important;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 987px) {
+    .ColorNavLink {
+        width: 150px;
+        display: flex;
+        color: #52AB98 !important;
+    }
+    .ColorNavLinkEnd {
+        width: 150px;
+        display: flex;
+        justify-content: flex-start;
+        color: #52AB98 !important;
+    }
+    .ColorNavLinkStart {
+        width: 175px;
+        display: flex;
+        color: #52AB98 !important;
+    }
+    .responsiveNavLink {
+        display: flex;
+        justify-content: space-around !important;
+        height: 90vh;
+    }
+}
+@media (max-width: 649px) {
+    .ColorNavLinkStart {
+        width: 175px;
+        display: flex;
+    }
+}
+@media (max-width: 896px) {
+    .ResponsiveFont {
+        font-size: 0.8rem !important;
+    }
+}
+
+.GridFormat{
+    border:solid green 1px;
+}
+
+
+

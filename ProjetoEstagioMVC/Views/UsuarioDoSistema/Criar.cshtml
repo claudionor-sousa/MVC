@@ -1,0 +1,28 @@
+﻿@model UsuarioModel
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<form class="modal-content" asp-controller="UsuarioDoSistema" asp-action="Criar" method="post">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5 TitleConfig" id="exampleModalLabel">Novo Usuário</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<div class="mb-3">
+									<label for="exampleFormControlInput1" class="form-label">Nome</label>
+									<input type="text" asp-for="Nome" class="form-control" id="exampleFormControlInput1" placeholder="digite seu nome">
+									@Html.ValidationMessageFor(x => x.Nome)
+								</div>
+								<div class="mb-3">
+									<label for="exampleFormControlInput1" class="form-label">Email</label>
+									<input type="email" asp-for="Email" class="form-control" id="exampleFormControlInput1" placeholder="digite seu e-mail">
+									@Html.ValidationMessageFor(x => x.Email)
+								</div>
+							</div>
+							<div class="modal-footer" , style="justify-content:center;">
+								<button  type="button"  aria-label="Close" class="btn-footer-modal" data-bs-dismiss="modal">cancelar</button>
+								<button  class="btn-footer-modal" type="submit">Salvar</button>
+							</div>
+						</form>
+					</div>
+				</div>

@@ -1,0 +1,148 @@
+﻿.body-aut {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #2B6777 40%, #C8D8E4 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.6rem;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    width: 450px;
+    height: 500px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    font-family: 'Noto Sans', sans-serif;
+   
+}
+
+.input-autenticacao {
+    background-color: #FFF;
+    width: 90%;
+    margin-left: 5%;
+    border: solid 1px gray;
+    border-radius: 5px;
+    color: green;
+    height: 100%;
+}
+
+.TitleForm {
+    color: #52AB98;
+    margin-bottom: 2em;
+}
+
+.Container-inputAuth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.ContainerInputLogin{
+    margin-bottom:10%;
+    width:100%
+}
+.LabelLogin {
+    margin-left: 5%;
+}
+
+
+.InputCheckBox {
+    width: 30px;
+    height: 17px;
+}
+
+.divCheck {
+    width: 93%;
+    accent-color: rgb(221, 218, 218);
+}
+
+    .divCheck label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3%;
+        margin-top: 4%;
+    }
+
+        .divCheck label:hover {
+            color: #2B6777;
+        }
+
+        .divCheck label span {
+            color: #1c1c1d;
+        }
+
+            .divCheck label span:hover {
+                color: #2B6777;
+            }
+
+        .divCheck label input:checked + span {
+            transition: 0.5;
+            color: #2B6777;
+        }
+
+.btn-entry {
+    width: 110px;
+    height: 45px;
+    margin-bottom: 20px;
+    background-color: #52AB98;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+}
+
+    .btn-entry:hover {
+        background-color: #2B6777;
+        transition: 0.3s;
+    }
+
+.Lembrar-mail {
+    color: #52AB98;
+    text-decoration: none;
+}
+/*Responsivo da pagina de Autenticação*/
+@media( max-width:1203px) {
+    .body-aut {
+        background: linear-gradient(90deg, #2B6777 43%, #C8D8E4 30%);
+    }
+
+    .container-form {
+        width: 360px;
+        height: 500px;
+        margin-left: 0;
+    }
+
+        .container-form p {
+            padding-bottom: 15px;
+        }
+
+    .divCheck label {
+        justify-content: center;
+        padding-bottom: 40px;
+    }
+
+    .btn-entry {
+        height: 45px;
+        width: 120px;
+    }
+
+    @media(max-width:379px) {
+        .container-form {
+            width: 300px;
+            height: 450px;
+            margin-left: 0;
+        }
+
+        .btn-entry {
+            margin-bottom: 25px;
+        }
+    }
+}

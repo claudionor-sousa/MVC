@@ -1,0 +1,19 @@
+﻿@model UsuarioModel
+
+<!--modal  confirmar exclusão-->
+        <form class="modal-content" asp-controller="UsuarioDoSistema" asp-action="Delete" method="post">
+            <input type="hidden" asp-for=IdUsuario/>
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 TitleConfig" id="exampleModalLabel">Realmente deseja apagar o usuário (@Model.Nome) ?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-danger" data-bs-dismiss="modal" type="button">cancelar</button>
+                    <button class="btn btn-primary"  asp-action="Apagar" asp-controller="UsuarioDoSistema" asp-route-id="@Model.IdUsuario" style="background-color:#52AB98;">Confirmar</button>
+                </div>
+            </div>
+        </div>
+        </form>
+  

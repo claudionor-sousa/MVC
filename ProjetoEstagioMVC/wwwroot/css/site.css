@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #C8D8E4
+}
+.field-validation-error{
+    color:#e01d1d;
+}
+.close-alert {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    height: 31px;
+    background-color: #52AB98 !important;
+    border: none;
+    border-radius: 20px;
+}
+.alert-success {
+    background-color: #52AB98 !important;
+    color: white;
+    margin-top:20px;
+}

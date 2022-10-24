@@ -1,0 +1,40 @@
+﻿@model UsuarioModel
+<!--modal editar-->
+
+
+        <form class="modal-content" asp-controller="UsuarioDoSistema" asp-action="Editar" method="post">
+            <input type="hidden" asp-for=IdUsuario/>
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 TitleConfig" id="exampleModalLabel">Editar Usuário</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"  aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">E-mail</label>
+                    <input type="email" asp-for="Email" class="form-control"  placeholder="digite seu email">
+                    @Html.ValidationMessageFor(x => x.Email)
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
+                    <input type="text" asp-for="Nome" class="form-control"  placeholder="digite seu nome">
+                    @Html.ValidationMessageFor(x => x.Nome)
+                </div><div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">data alteração</label>
+                    <input type="text" asp-for="DataAlteracao" class="form-control"  placeholder="digite seu nome">
+                </div><div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">dataCadastro</label>
+                    <input type="text" asp-for="DataCadastro" class="form-control"  placeholder="digite seu nome">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">senha</label>
+                    <input type="text" asp-for="Senha" class="form-control"  placeholder="senha">
+                </div>
+            </div>
+            <div class="modal-footer" , style="justify-content:center;">
+                <button type="button" aria-label="Close" class="btn-footer-modal" data-bs-dismiss="modal" >cancelar</button>
+                <button class="btn-footer-modal" asp-controller="UsuarioDoSistema" asp-action="Alterar" type="submit">Salvar</button>
+                
+
+            </div>
+        </form>
+   
