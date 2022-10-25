@@ -15,5 +15,10 @@ namespace ProjetoEstagioMVC.Models
         public DateTime DataCadastro { get; set; } = DateTime.Now;
         public DateTime? DataAlteracao { get; set; } 
         public long? IdUsuarioAlteracao { get; set; }
+
+        public bool SenhaValida (string senha)
+        {
+            return Senha == senha;
+        }
     }
 }

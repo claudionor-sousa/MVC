@@ -1,18 +1,35 @@
-﻿@{
+﻿@model LoginModel
+@{
     Layout = "_LayoutDeslogado";
     ViewData["title"] = "Login";
 }
 
-<form class="container-form">
+
+<form class="container-form" asp-controller="LoginUsuario" asp-action="Entrar" method="post">
     <h1 class="TitleForm">Autenticação</h1>
+    @if (TempData["MensagemErro"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="btn-cadastrar btn-danger btn-sm close-alert" arial-label="Close">X</button>
+                 @TempData["MensagemErro"]
+            </div>
+
+        }
     <div class='Container-inputAuth'>
         <div class="ContainerInputLogin">
             <label for="exampleFormControlInput1" class="form-label LabelLogin">Email</label>
-            <input type="email" class="input-autenticacao" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="email" class="input-autenticacao" asp-for="Email" id="Email" placeholder="name@example.com">
+            <div class="DigitAvisoForm">
+                @Html.ValidationMessageFor(x=>x.Email)
+            </div>
         </div>
         <div class="ContainerInputLogin">
             <label for="exampleFormControlInput1" class="form-label LabelLogin">Senha</label>
-            <input type="password" class="input-autenticacao" id="exampleFormControlInput1" placeholder="*********">
+            <input type="password" class="input-autenticacao" asp-for="senha" id="senha" placeholder="*********">
+            <div class="DigitAvisoForm">
+                @Html.ValidationMessageFor(x=>x.senha)
+            </div>
+            
         </div>
     </div>
 
