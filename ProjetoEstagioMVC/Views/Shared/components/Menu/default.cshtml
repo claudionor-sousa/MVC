@@ -1,0 +1,28 @@
+﻿@model UsuarioModel
+<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+    <div class="offcanvas-header">
+        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 responsiveNavLink">
+            <li class="nav-item col-2">
+                <a class="nav-link ColorNavLink NavResponsive" asp-area="" asp-controller="Home" asp-action="Index">Página principal</a>
+            </li>
+            <li class="nav-item col-2">
+                <a class="nav-link ColorNavLinkStart" asp-area="" asp-controller="UsuarioDoSistema" asp-action="Index">Usuario do Sitema</a>
+            </li>
+            <li class="nav-item col-4">
+
+            </li>
+            <li class="nav-item col-2">
+                <a class="nav-link ColorNavLinkEnd" asp-area="" asp-controller="AlterarSenha" asp-action="Index">Alterar senha</a>
+            </li>
+            <li class="nav-item col-2">
+                <a class="nav-link ColorNavLink" asp-area="" asp-controller="LoginUsuario" asp-action="Sair">Sair</a>
+            </li>
+        </ul>
+    </div>
+</div>
